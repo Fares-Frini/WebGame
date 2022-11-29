@@ -1,0 +1,184 @@
+
+.gamebody
+{
+    width: 100%;
+    background: linear-gradient(45deg,#c41fc4,#1e4cc9);
+}
+#gamescreenstart
+{
+    margin-top:100px;
+    width:1000px;
+    height: 500px;
+    background:white;
+    border-radius: 20px;
+    z-index: 0;
+    background-size: cover;
+}
+#startgame
+{   
+    position: absolute;
+    left: 40%;
+    top: 70%;
+    height: 50px;
+    width: 200px;
+    z-index: 100;
+}
+#canvas
+{
+    position: relative;
+    background:linear-gradient(black,10%,#00008B,black    )  ;   
+     width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    top: -150px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#maps
+{
+    margin: 130px;
+    display: flex ;
+}
+#map1
+{   
+    margin: 10px;
+    top: 70px;
+    left: 150px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 5px solid;
+    animation: float infinite 2.5s ease-in-out;
+    z-index: 100;
+    cursor: pointer;
+    transition:1s;
+}
+#map2
+{       margin: 10px;
+
+    top: 70px;
+    left: 150px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 5px solid;
+    animation: float infinite 2.5s ease-in-out;
+    z-index: 100;
+    cursor: pointer;
+    transition:1s;
+}
+#map3
+{       margin: 10px;
+
+    top: 70px;
+    left: 150px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 5px solid;
+    animation: float infinite 2.5s ease-in-out;
+    z-index: 100;
+    cursor: pointer;
+    transition:1s;
+}
+#map4
+{       margin: 10px;
+
+    top: 70px;
+    left: 150px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 5px solid;
+    animation: float infinite 2.5s ease-in-out;
+    z-index: 100;
+    cursor: pointer;
+    transition:1s;
+}
+#map1:hover,
+#map2:hover,
+#map3:hover,
+#map4:hover
+{
+    transition: 1s;
+    margin: 20px;
+}
+#red
+{
+    position:absolute;
+    left: 150px;
+    top: 400px;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    border-radius: 50%;
+    border: 6px solid rgb(155, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+#red:focus
+{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#blue
+{
+    position:absolute;
+    left: 270px;
+    top: 520px;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    border-radius: 50%;
+    border: 6px solid rgb(0, 0, 155);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+#blue:focus
+{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#green
+{
+    position:absolute;
+    left: 150px;
+    top: 520px;
+    background-color: rgb(0, 255, 0);
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    border-radius: 50%;
+    border: 6px solid rgb(0, 155, 0);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+#green:focus
+{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#player
+{   
+    top: 400px;
+    left: 270px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    background-color:white;
+    border: 5px solid;
+}
+#time
+{
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
