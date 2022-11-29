@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="icon" href="/img/logo.png" <script src="https://kit.fontawesome.com/cb2ff29db7.js"
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+        integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <script type="module" src="app.js"></script>
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootsrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/cb2ff29db7.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <div id="preloader">
+        <div class="dot" style="--i:0;"></div>
+        <div class="dot" style="--i:1;"></div>
+        <div class="dot" style="--i:2;"></div>
+        <div class="dot" style="--i:3;"></div>
+        <div class="dot" style="--i:4;"></div>
+        <div class="dot" style="--i:5;"></div>
+        <div class="dot" style="--i:6;"></div>
+        <div class="dot" style="--i:7;"></div>
+        <div class="dot" style="--i:8;"></div>
+        <div class="dot" style="--i:9;"></div>
+    </div>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="index.html"><label class="logo">F</label></a>
+            <ul>
+                <label><input type="checkbox" id="switch"></label>
+                <li><a id="hover" href="index.html">Profil</a></li>
+                <li><a id="hover" href="parcours.html">Parcours Académique</a></li>
+                <li><a id="hover" href="experience.html">expérience</a></li>
+                <li><a class="cta" href="contact.html"><button id="contact">Contact Me</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="gamebody">
+        <div id="gamescreenstart" >
+            <button id="startgame" style="display:block" onclick="startgame()">Start Game</button>
+            <div id="maps" >
+            <img src="ressources/map2.png" id="map1" style="display: none;" onclick="maps1()" >
+            <img src="ressources/map3.png" id="map2" style="display: none;" onclick="maps2()" >
+            <img src="ressources/map4.png" id="map3" style="display: none;" onclick="maps3()" >
+            <img src="ressources/map5.png" id="map4" style="display: none;" onclick="maps4()" >
+            </div>
+            <label id="time">00:00</label>
+            <div id="player" style="display:none ;"></div>
+            <button id="blue" style="display: none;" onclick="button('2')" >Blue</button>
+            <button id="red" style="display: none;" onclick="button('3')" >Red</button>
+            <button id="green" style="display: none;" onclick="button('4')" >Green</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_content">
+            <h3>More Info</h3>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/fares.frini.3" target="_blank" class="fa fa-facebook-official" aria-hidden="true"></a></li>
+                <li><a href="#" class="fa fa-instagram"  target="_blank" aria-hidden="true"></a></li>
+                <li><a href="#" class="fa fa-linkedin-square" target="_blank" aria-hidden="true"></a></li>
+                <li><a href="#" class="fa fa-twitter-square" target="_blank" aria-hidden="true"></a></li>
+            </ul>
+        </div>
+        <div class="footer_bottom">
+            <p>copyright &copy;2022 codeOpacity. designed by <span>Frini Mohammed Fares</span></p>
+        </div>
+       
+    </footer>
+</body>
+
+</html>
