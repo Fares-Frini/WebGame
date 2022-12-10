@@ -118,13 +118,11 @@ function moove(name) {
     }
     if (endcycle == 1) {
       clearInterval(mov);
+      document.getElementById(name).style.display= "none";
+      endcycle==0;  
     }
   }, 10);
-  if (endcycle == 1) {
-    endcycle=0;
-    document.getElementById(name).style.left = 300 + "px";
-    return;
-  }
+
 }
 
 function start() {
@@ -151,6 +149,7 @@ function timer() {
 var C = 0;
 function button(R) {
   let player = document.getElementById("player");
+  let beem = document.getElementById("beem");
   console.log(R);
   console.log(C);
   R = parseInt(R);
@@ -164,36 +163,43 @@ function button(R) {
   switch (C) {
     case 2:
       player.style.background = "blue";
+      beem.style.background = "blue";
       console.log("lets go");
       C = 2;
       break;
     case 3:
       player.style.background = "red";
+      beem.style.background = "red";
       console.log("lets go");
       C = 3;
       break;
     case 4:
       player.style.background = "green";
+      beem.style.background = "green";
       console.log("lets go");
       C = 4;
       break;
     case 5:
       player.style.background = "purple";
+      beem.style.background = "purple";
       console.log("lets go");
       C = 5;
       break;
     case 6:
       player.style.background = "cyan";
+      beem.style.background = "cyan";
       console.log("lets go");
       C = 6;
       break;
     case 7:
       player.style.background = "yellow";
+      beem.style.background = "yellow";
       console.log("lets go");
       C = 7;
       break;
     case 9:
       player.style.background = "#582900";
+      beem.style.background = "#582900";
       console.log("lets go");
       C = 9;
       break;
@@ -207,6 +213,12 @@ window.addEventListener("keydown", function (ev) {
 
   if (ev.code === "Space") {
     console.log("space pressed");
+    let beem = document.getElementById("beem");
+    beem.classList.toggle("AAA");
+    beemretract = setInterval(() => {
+      beem.classList.toggle("AAA");
+      clearInterval(beemretract);
+    }, 350);
     ev.preventDefault();
     reset();
   } else if (ev.code === "KeyS") {
@@ -224,6 +236,11 @@ var endcycle = 0;
 function reset() {
   let player = document.getElementById("player");
   let ennemy = document.getElementById("ennemy");
+  let beem = document.getElementById("beem");
+  clearcolor = setInterval(() => {
+    beem.style.background="white";
+    clearInterval(clearcolor);
+  }, 350);
   player.style.background = "white";
   console.log(E);
   console.log(C);

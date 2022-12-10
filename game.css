@@ -202,3 +202,21 @@
     font-size: 30px;
     font-weight: bold;
 }
+.beem
+{
+    top: 400px;
+    left: 420px;
+    position: absolute;
+    width: 0px;
+    height: 200px;
+    z-index: 100;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color:white;
+
+}
+.AAA
+{
+    transition: ease width 0.2s;
+    width: 730px;
+}
