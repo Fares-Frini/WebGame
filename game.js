@@ -64,22 +64,90 @@ function mapschosen(R) {
   }
   start();
 }
-function start() {
-  //timer();
- var player=document.getElementById("player");
-  player.style.display="block";
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
 }
-/*function timer() {
-  let clock = document.getElementById("time");
+var E;
 
-  for (let i = 0; i < 61; i++) {
-    function sleep(ms) {
-      return new Promise((resolve) => setTimeout(resolve, ms));
-    }
-    console.log(i);
-    sleep(2000).then(() => {});
+function random(ennemy) {
+  ennemy.style.display = "block";
+  E = getRandomInt(10);
+  console.log(E);
+  while (E == 0 || E == 8 || E == 1) {
+    E = getRandomInt(10);
   }
-}*/
+  switch (E) {
+    case 2:
+      ennemy.style.background = "blue";
+      console.log("lets go");
+      break;
+    case 3:
+      ennemy.style.background = "red";
+      console.log("lets go");
+      break;
+    case 4:
+      ennemy.style.background = "green";
+      console.log("lets go");
+      break;
+    case 5:
+      ennemy.style.background = "purple";
+      console.log("lets go");
+      break;
+    case 6:
+      ennemy.style.background = "cyan";
+      console.log("lets go");
+      break;
+    case 7:
+      ennemy.style.background = "yellow";
+      console.log("lets go");
+      break;
+    case 9:
+      ennemy.style.background = "#582900";
+      console.log("lets go");
+      break;
+  }
+}
+function moove(name) {
+  let moveBy = 1100;
+
+  mov = setInterval(() => {
+    document.getElementById(name).style.left = moveBy + "px";
+    moveBy--;
+    if (moveBy == 350) {
+      moveBy = 1100;
+    }
+    if (endcycle == 1) {
+      clearInterval(mov);
+    }
+  }, 10);
+  if (endcycle == 1) {
+    endcycle=0;
+    document.getElementById(name).style.left = 300 + "px";
+    return;
+  }
+}
+
+function start() {
+  timer();
+  var player = document.getElementById("player");
+  player.style.display = "block";
+  var ennemy = document.getElementById("ennemy");
+  random(ennemy);
+  moove("ennemy");
+}
+var time;
+function timer() {
+  var minute = 0;
+  var sec = 0;
+  time = setInterval(() => {
+    document.getElementById("time").innerHTML = "0" + minute + ":" + sec;
+    sec++;
+    if (sec == 60) {
+      sec = 0;
+      minute += 1;
+    }
+  }, 1000);
+}
 var C = 0;
 function button(R) {
   let player = document.getElementById("player");
@@ -130,34 +198,47 @@ function button(R) {
       C = 9;
       break;
   }
-  let body = document.getElementById("body");
-  window.addEventListener("keydown", function (ev) {
-    if (ev.keyCode === 32) {
-      console.log("space pressed");
-      ev.preventDefault();
-      reset();
-    } else {
-      if (ev.keyCode === 83) {
-        console.log("s pressed");
-        button(3);
-      } else {
-        if (ev.keyCode === 68) {
-          console.log("d pressed");
-          button(4);
-        } else {
-          if (ev.keyCode === 70) {
-            console.log("f pressed");
-            button(2);
-          }
-        }
-      }
-    } 
-  });
-
-  function reset() {
-    let player = document.getElementById("player");
-    player.style.background = "white";
-    R = 0;
-    C = 0;
+}
+window.addEventListener("keydown", function (ev) {
+  if (ev.repeat) {
+    if (ev.code === "Space") ev.preventDefault();
+    return;
   }
+
+  if (ev.code === "Space") {
+    console.log("space pressed");
+    ev.preventDefault();
+    reset();
+  } else if (ev.code === "KeyS") {
+    console.log("s pressed");
+    button(3);
+  } else if (ev.code === "KeyD") {
+    console.log("d pressed");
+    button(4);
+  } else if (ev.code === "KeyF") {
+    console.log("f pressed");
+    button(2);
+  }
+});
+var endcycle = 0;
+function reset() {
+  let player = document.getElementById("player");
+  let ennemy = document.getElementById("ennemy");
+  player.style.background = "white";
+  console.log(E);
+  console.log(C);
+  console.log(R);
+  if (E == C) {
+    random(ennemy);
+    score();
+    endcycle = 1;
+  }
+  R = 0;
+  C = 0;
+}
+var scr = 0;
+function score() {
+  scr += 10;
+  var score = document.getElementById("score");
+  score.innerHTML = "0000" + scr;
 }
