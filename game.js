@@ -1,6 +1,16 @@
 function startgame() {
   let startgame = document.getElementById("startgame");
   let screen = document.getElementById("gamescreenstart");
+  let lost=document.getElementById("lost");
+  let button =document.getElementById("restart");
+  let eye =document.getElementById("eye");
+  eye.style.display="none";
+  let hand =document.getElementById("hand");
+  hand.style.display="none";
+  let wand =document.getElementById("wand");
+  wand.style.display="none";
+  button.style.display="none";
+  lost.style.display="none";
   startgame.style.display = "none";
   mapchoose(screen);
 }
@@ -114,7 +124,13 @@ function moove(name) {
     document.getElementById(name).style.left = moveBy + "px";
     moveBy--;
     if (moveBy == 350) {
-      moveBy = 1100;
+      loose();
+      endcycle=1;
+    }
+    if (moveBy==500) {
+      let eye =document.getElementById("eye");
+      eye.src = "ressources/scared.png";
+      
     }
     if (endcycle == 1) {
       clearInterval(mov);
@@ -124,11 +140,33 @@ function moove(name) {
   }, 10);
 
 }
+function loose()
+{
+  let lost=document.getElementById("lost");
+  let button =document.getElementById("restart");
+  button.style.display="block";
+  lost.style.display="block";
+  let red = document.getElementById("red");
+  let blue = document.getElementById("blue");
+  let green = document.getElementById("green");
+red.style.display = "none";
+  blue.style.display = "none";
+  green.style.display = "none";
+  var player = document.getElementById("player");
+  player.style.display = "none";
+}
 
 function start() {
   timer();
   var player = document.getElementById("player");
   player.style.display = "block";
+  var eye = document.getElementById("eye");
+  eye.style.display = "block";
+  eye.style.display="block";
+  let hand =document.getElementById("hand");
+  hand.style.display="block";
+  let wand =document.getElementById("wand");
+  wand.style.display="block";
   var ennemy = document.getElementById("ennemy");
   random(ennemy);
   moove("ennemy");
@@ -164,42 +202,49 @@ function button(R) {
     case 2:
       player.style.background = "blue";
       beem.style.background = "blue";
+      beem.style.boxShadow= "0px 0px 40px 20px blue";
       console.log("lets go");
       C = 2;
       break;
     case 3:
       player.style.background = "red";
       beem.style.background = "red";
+      beem.style.boxShadow= "0px 0px 40px 20px red";
       console.log("lets go");
       C = 3;
       break;
     case 4:
       player.style.background = "green";
       beem.style.background = "green";
+      beem.style.boxShadow= "0px 0px 40px 20px green";
       console.log("lets go");
       C = 4;
       break;
     case 5:
       player.style.background = "purple";
       beem.style.background = "purple";
+      beem.style.boxShadow= "0px 0px 40px 20px purple";
       console.log("lets go");
       C = 5;
       break;
     case 6:
       player.style.background = "cyan";
       beem.style.background = "cyan";
+      beem.style.boxShadow= "0px 0px 40px 20px cyan";
       console.log("lets go");
       C = 6;
       break;
     case 7:
       player.style.background = "yellow";
       beem.style.background = "yellow";
+      beem.style.boxShadow= "0px 0px 40px 20px yellow";
       console.log("lets go");
       C = 7;
       break;
     case 9:
       player.style.background = "#582900";
       beem.style.background = "#582900";
+      beem.style.boxShadow= "0px 0px 40px 20px #582900";
       console.log("lets go");
       C = 9;
       break;
@@ -214,9 +259,12 @@ window.addEventListener("keydown", function (ev) {
   if (ev.code === "Space") {
     console.log("space pressed");
     let beem = document.getElementById("beem");
+    let background=document.getElementById("gamescreenstart");
     beem.classList.toggle("AAA");
+    background.classList.toggle("BBB");
     beemretract = setInterval(() => {
       beem.classList.toggle("AAA");
+      background.classList.toggle("BBB");
       clearInterval(beemretract);
     }, 350);
     ev.preventDefault();
@@ -239,9 +287,11 @@ function reset() {
   let beem = document.getElementById("beem");
   clearcolor = setInterval(() => {
     beem.style.background="white";
+    beem.style.boxShadow= "0px 0px 40px 20px white";
     clearInterval(clearcolor);
   }, 350);
   player.style.background = "white";
+  
   console.log(E);
   console.log(C);
   console.log(R);
