@@ -9,10 +9,11 @@
     margin-top:100px;
     width:1000px;
     height: 500px;
-    background:white;
     border-radius: 20px;
     z-index: 0;
-    background-size: cover;
+    background-color: #262626 !important;
+    background: url(ressources/geometry.gif) no-repeat center center;
+    background-size: 40%;
 }
 .BBB
 {
@@ -22,11 +23,24 @@
 #startgame
 {   
     position: absolute;
-    left: 40%;
-    top: 70%;
+    left: 42%;
+    top: 80%;
     height: 50px;
     width: 200px;
     z-index: 100;
+    font-weight: bold;
+    font-size: 25px;
+    background-color:#5f5ffd;
+    border: 4px solid #252583;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transition: 1s;
+}
+#startgame:hover
+{
+    transition: 1s;
+
+    height:70px;
+    width:200;
 }
 #canvas
 {
@@ -176,18 +190,13 @@
     height: 100px;
     z-index: 100;
     background-color:white;
-    border: 10px solid;
+    border: 1px solid;
+    border-radius: 5px;
     border-image-slice: 1;
-    border-width: 5px;
+    border-width: 3px;
     animation: playerfloat 1s infinite ease-in-out;
 }
-.border-gradient 
-{
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-    border-radius: 25px;
-  }
-.border-gradient ::after
-{}
+
 @keyframes playerfloat {
     0% {
       margin-top: 0px;
@@ -211,8 +220,7 @@
 #ennemy1,
 #ennemy3,
 #ennemy2,
-#ennemy4,
-#e
+#ennemy4
 {
     top: 490px;
     left: 1100px;
@@ -323,7 +331,7 @@
 {
     margin: 10px;
     z-index: 101;
-    width: 70px;
+    width: 90px;
 }
 #hand
 {

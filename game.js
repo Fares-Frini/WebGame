@@ -116,16 +116,16 @@ function random(ennemy) {
       console.log("lets go");
       break;
   }
+  return E;
 }
-function moove(name) {
+function moove(name,R) {
   let moveBy = 1100;
-  var time;
-  time = getRandomInt(20);
+  
 
   mov = setInterval(() => {
     document.getElementById(name).style.left = moveBy + "px";
     moveBy--;
-    if (moveBy == 350) {
+     if (moveBy == 350) {
       loose();
       endcycle=1;
     }
@@ -134,13 +134,95 @@ function moove(name) {
       eye.src = "ressources/scared.png";
       
     }
-    if (endcycle == C && boom==1) {
+    if (endcycle == R) {
       clearInterval(mov);
+      console.log(1);
+      moveBy=0;
       document.getElementById(name).style.display= "none";
       endcycle=0;
       boom=0;  
     }
-  }, time);
+  }, 10);
+
+}function moove1(name,R) {
+  let moveBy1 = 1100;
+   
+
+  mov = setInterval(() => {
+    document.getElementById(name).style.left = moveBy1 + "px";
+    moveBy1--;
+     if (moveBy1 == 350) {
+      loose();
+      endcycle=1;
+    }
+    if (moveBy1==500) {
+      let eye =document.getElementById("eye");
+      eye.src = "ressources/scared.png";
+      
+    }
+    if (endcycle == R) {
+      clearInterval(mov);
+      console.log(1);
+      moveBy1=0;
+      document.getElementById(name).style.display= "none";
+      endcycle=0;
+      boom=0;  
+    }
+  }, 10);
+
+}
+function moove2(name,R) {
+  let moveBy2 = 1100;
+   
+
+  mov = setInterval(() => {
+    document.getElementById(name).style.left = moveBy2 + "px";
+    moveBy2--;
+     if (moveBy2 == 350) {
+      loose();
+      endcycle=1;
+    }
+    if (moveBy2==500) {
+      let eye =document.getElementById("eye");
+      eye.src = "ressources/scared.png";
+      
+    }
+    if (endcycle == R) {
+      clearInterval(mov);
+      console.log(1);
+      moveBy2=0;
+      document.getElementById(name).style.display= "none";
+      endcycle=0;
+      boom=0;  
+    }
+  }, 10);
+
+}
+function moove3(name,R) {
+  let moveBy3 = 1100;
+  
+
+  mov = setInterval(() => {
+    document.getElementById(name).style.left = moveBy3 + "px";
+    moveBy3--;
+     if (moveBy3 == 350) {
+      loose();
+      endcycle=1;
+    }
+    if (moveBy3==500) {
+      let eye =document.getElementById("eye");
+      eye.src = "ressources/scared.png";
+      
+    }
+    if (endcycle == R) {
+      clearInterval(mov);
+      console.log(1);
+      moveBy3=0;
+      document.getElementById(name).style.display= "none";
+      endcycle=0;
+      boom=0;  
+    }
+  }, 10);
 
 }
 function loose()
@@ -167,6 +249,7 @@ red.style.display = "none";
 
 function start() {
   timer();
+  var R1,R2,R3,R4;
   var player = document.getElementById("player");
   player.style.display = "block";
   var eye = document.getElementById("eye");
@@ -179,12 +262,29 @@ function start() {
   let wand =document.getElementById("wand");
   wand.style.display="block";
   var ennemy = document.getElementById("ennemy");
-  random(ennemy1);
-  random(ennemy2);
-  random(ennemy3);
-  random(ennemy4);
-  moove("ennemy1");
-  
+  R1=random(ennemy1);
+  R2=random(ennemy2);
+  R3=random(ennemy3);
+  R4=random(ennemy4);
+  moove("ennemy1",R1);
+  var time;
+  time = getRandomInt(2000);
+  e1 = setTimeout(() => {
+    moove1("ennemy4",R4);
+    console.log("hello")
+  }, time);
+  time = getRandomInt(2000);
+  e2 = setTimeout(() => {
+    moove2("ennemy2",R2);
+        console.log("hello")
+  }, time);
+  time = getRandomInt(2000);
+  e3 = setTimeout(() => {
+    moove3("ennemy3",R3);
+    clearInterval(e3)
+  }, time);
+
+
 
 }
 var time;
@@ -326,15 +426,12 @@ function reset() {
     clearInterval(clearcolor);
   }, 350);
   player.style.background = "white";
-  
+  endcycle=C;
   console.log(E);
   console.log(C);
   console.log(R);
-  if (E == C) {
-    score();
-    endcycle = C;
-    boom=1;
-  }
+
+  
   R = 0;
   C = 0;
 }
