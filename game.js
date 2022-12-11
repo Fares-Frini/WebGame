@@ -119,6 +119,8 @@ function random(ennemy) {
 }
 function moove(name) {
   let moveBy = 1100;
+  var time;
+  time = getRandomInt(20);
 
   mov = setInterval(() => {
     document.getElementById(name).style.left = moveBy + "px";
@@ -132,12 +134,13 @@ function moove(name) {
       eye.src = "ressources/scared.png";
       
     }
-    if (endcycle == 1) {
+    if (endcycle == C && boom==1) {
       clearInterval(mov);
       document.getElementById(name).style.display= "none";
-      endcycle==0;  
+      endcycle=0;
+      boom=0;  
     }
-  }, 10);
+  }, time);
 
 }
 function loose()
@@ -154,6 +157,12 @@ red.style.display = "none";
   green.style.display = "none";
   var player = document.getElementById("player");
   player.style.display = "none";
+  var hand = document.getElementById("hand");
+  hand.style.display = "none";
+  var feet = document.getElementById("feet");
+  feet.style.display = "none";
+  var wand = document.getElementById("wand");
+  wand.style.display = "none";
 }
 
 function start() {
@@ -170,8 +179,13 @@ function start() {
   let wand =document.getElementById("wand");
   wand.style.display="block";
   var ennemy = document.getElementById("ennemy");
-  random(ennemy);
-  moove("ennemy");
+  random(ennemy1);
+  random(ennemy2);
+  random(ennemy3);
+  random(ennemy4);
+  moove("ennemy1");
+  
+
 }
 var time;
 function timer() {
@@ -203,49 +217,49 @@ function button(R) {
   switch (C) {
     case 2:
       player.style.background = "blue";
-      beem.style.background = "blue";
+      beem.style.background = "linear-gradient( blue , #ADD8E6, blue )";
       beem.style.boxShadow= "0px 0px 40px 20px blue";
       console.log("lets go");
       C = 2;
       break;
     case 3:
       player.style.background = "red";
-      beem.style.background = "red";
+      beem.style.background = "linear-gradient( red , #DC143C, red )";
       beem.style.boxShadow= "0px 0px 40px 20px red";
       console.log("lets go");
       C = 3;
       break;
     case 4:
       player.style.background = "green";
-      beem.style.background = "green";
+      beem.style.background = "linear-gradient( green , #90EE90, green )";
       beem.style.boxShadow= "0px 0px 40px 20px green";
       console.log("lets go");
       C = 4;
       break;
     case 5:
       player.style.background = "purple";
-      beem.style.background = "purple";
+      beem.style.background =  "linear-gradient( purple , #d473d4, purple )";
       beem.style.boxShadow= "0px 0px 40px 20px purple";
       console.log("lets go");
       C = 5;
       break;
     case 6:
       player.style.background = "cyan";
-      beem.style.background = "cyan";
+      beem.style.background = "linear-gradient( cyan , #E0FFFF, cyan )";
       beem.style.boxShadow= "0px 0px 40px 20px cyan";
       console.log("lets go");
       C = 6;
       break;
     case 7:
       player.style.background = "yellow";
-      beem.style.background = "yellow";
+      beem.style.background = "linear-gradient( yellow , #ffffe0, yellow )";
       beem.style.boxShadow= "0px 0px 40px 20px yellow";
       console.log("lets go");
       C = 7;
       break;
     case 9:
       player.style.background = "#582900";
-      beem.style.background = "#582900";
+      beem.style.background = "linear-gradient( #582900 , #5b3c11, #582900 )";
       beem.style.boxShadow= "0px 0px 40px 20px #582900";
       console.log("lets go");
       C = 9;
@@ -301,6 +315,7 @@ window.addEventListener("keydown", function (ev) {
   }
 });
 var endcycle = 0;
+var boom=0;
 function reset() {
   let player = document.getElementById("player");
   let ennemy = document.getElementById("ennemy");
@@ -316,9 +331,9 @@ function reset() {
   console.log(C);
   console.log(R);
   if (E == C) {
-    random(ennemy);
     score();
-    endcycle = 1;
+    endcycle = C;
+    boom=1;
   }
   R = 0;
   C = 0;

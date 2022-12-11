@@ -54,29 +54,7 @@ nav {
   width: 100%;
   z-index: 100;
 }
-label.logo {
-  font-family: "Courier New", Courier, monospace;
-  order: 3;
-  margin-left: auto;
-  font-size: 5em;
-  letter-spacing: 15px;
-  color: #0e3742;
-  background-color: var(--text-color);
-  border-radius: 5px;
-  text-align: center;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
-  line-height: 0.7em;
-  outline: none;
-  animation: animatelogo 5s linear infinite;
-  cursor: pointer;
-  font-size: 50px;
-  line-height: 100px;
-  padding: 0 100px;
-  font-weight: bold;
-  margin-left: 30px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
+
 @keyframes animatelogo {
   0% {
     color: #333533;
@@ -1078,4 +1056,25 @@ section {
     border-radius: 25px;
     border: 2px solid gray;
   }
+}
+.square {
+  
+  font-family: "Courier New", Courier, monospace;
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+  margin-left: 20px;
+  order: 3;
+  font-size: 1em;
+  letter-spacing: 15px;
+  color: #0e3742;
+  background-color: var(--text-color);
+  border-radius: 5px ;
+  
+}
+#eyelogo
+{
+  position: absolute;
+  width: 50px;
+  top: 10px;
 }

@@ -167,7 +167,7 @@
 {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-#player
+.player
 {   
     top: 490px;
     left: 200px;
@@ -176,9 +176,18 @@
     height: 100px;
     z-index: 100;
     background-color:white;
-    border: 5px solid;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
     animation: playerfloat 1s infinite ease-in-out;
 }
+.border-gradient 
+{
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    border-radius: 25px;
+  }
+.border-gradient ::after
+{}
 @keyframes playerfloat {
     0% {
       margin-top: 0px;
@@ -199,7 +208,11 @@
     font-size: 20px;
     font-weight: bold;
 }
-#ennemy
+#ennemy1,
+#ennemy3,
+#ennemy2,
+#ennemy4,
+#e
 {
     top: 490px;
     left: 1100px;
