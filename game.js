@@ -344,3 +344,58 @@ function score() {
   var score = document.getElementById("score");
   score.innerHTML = "0000" + scr;
 }
+function hover() {
+  var square=document.getElementById("square");
+  element=document.getElementById("eyelogo");
+  element.setAttribute('src', 'ressources/eyelogo.png');
+  var zzz=document.getElementById("ZZZ");
+  var eyeball=document.getElementById("eyeball");
+  var zzz1=document.getElementById("ZZZ1");
+  var zzz2=document.getElementById("ZZZ2");
+  var foot=document.getElementById("foot");
+  var foot2=document.getElementById("foot2");
+  var hand=document.getElementById("handlogo");
+  var hand2=document.getElementById("handlogo2");
+  var smile=document.getElementById("smile");
+  foot.classList.toggle("foot-hover");
+  foot2.classList.toggle("foot-hover2");
+  square.classList.toggle("square-animation");
+  zzz.style.display="none";
+  zzz1.style.display="none";
+  zzz2.style.display="none";
+  foot.style.display="block";
+  foot2.style.display="block";  
+  hand.style.display="block";
+  hand2.style.display="block";
+  smile.style.display="block";
+  eyeball.style.display="block";
+
+}
+
+function unhover() {
+ var element=document.getElementById("eyelogo");
+ var zzz=document.getElementById("ZZZ");
+ var zzz1=document.getElementById("ZZZ1");
+  var zzz2=document.getElementById("ZZZ2");
+  var foot=document.getElementById("foot");
+  var foot2=document.getElementById("foot2");
+  var hand=document.getElementById("handlogo");
+  var hand2=document.getElementById("handlogo2");
+  var smile=document.getElementById("smile");
+  foot2.classList.toggle("foot-hover2");
+  foot.classList.toggle("foot-hover");
+  element.setAttribute('src', 'ressources/closeeye.png');
+  zzz.style.display="block";
+  zzz1.style.display="block";
+  zzz2.style.display="block";
+  foot.style.display="none";
+  foot2.style.display="none";
+  hand.style.display="none";
+  hand2.style.display="none";
+  var square=document.getElementById("square");
+  smile.style.display="none";
+  square.classList.toggle("square-animation");
+  var eyeball=document.getElementById("eyeball");
+  eyeball.style.display="none";
+
+}

@@ -1058,23 +1058,218 @@ section {
   }
 }
 .square {
-  
+  position: absolute;
   font-family: "Courier New", Courier, monospace;
   width: 70px;
   height: 70px;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 50px;
   order: 3;
   font-size: 1em;
   letter-spacing: 15px;
-  color: #0e3742;
+  color:white;
   background-color: var(--text-color);
   border-radius: 5px ;
   
+
+}
+.square-animation
+{
+  animation: logo 10s infinite;
+}
+
+@keyframes logo
+{
+  0%
+  {
+    background-color: red;
+  }
+  15%
+  {
+    background-color: green;
+  }
+  30%
+  {
+    background-color: blue;
+  }
+  45%
+  {
+    background-color: cyan;
+  }
+  60%
+  {
+    background-color: yellow;
+  }
+  75%
+  {
+    background-color: purple;
+  }
+  90%
+  {
+    background-color:#582900 ;
+  }
+  100%
+  {
+    background-color:white ;
+  }
 }
 #eyelogo
 {
-  position: absolute;
-  width: 50px;
+  width: 70px;
   top: 10px;
+  transition: 0.5s;
+
+}
+.square:hover
+{
+  rotate: -5deg ;
+  transition: 0.5s;
+}
+#ZZZ
+{
+  top: 10px;
+  rotate: -5deg;
+  font-weight: bold;
+  font-size: 20px;
+  left: 120px;
+  position: absolute;
+  color: white;
+  animation: animatelogo 3s infinite ;
+
+}
+#ZZZ1
+{
+  top: 5px;
+  rotate: -5deg;
+  font-weight: bold;
+  font-size: 25px;
+  left: 135px;
+  position: absolute;
+  color: white;
+  animation: animatelogo 4s infinite ;
+
+}
+
+  
+
+#ZZZ2
+{
+  rotate: -5deg;
+  font-weight: bold;
+  font-size: 30px;
+  left: 150px;
+  position: absolute;
+  color: white;
+  animation: animatelogo 5s infinite ;
+}
+#foot
+{
+  left: 105px;
+  width: 40px;
+  top: 65px;
+  position: absolute; 
+  transition: rotate 0.2s;
+}
+#foot2
+{
+  left: 39px;
+  width: 38px;
+  top: 68px;
+  position: absolute; 
+  transition: rotate 0.2s;
+}
+.foot-hover
+{
+  transition: rotate 1s;
+  rotate: -35deg;
+  animation: zzz 5s infinite;
+}
+.foot-hover2
+{
+  transition: rotate 1s;
+  rotate: -35deg;
+  animation: zzz2 5s infinite;
+}
+@keyframes zzz {
+  0%
+  {
+    rotate: -35deg;
+  }
+  50%
+  {
+    rotate: 0deg;
+  }
+  100%
+  {
+    rotate: -35deg;
+  }
+  
+}
+@keyframes zzz2 {
+  0%
+  {
+    rotate: 35deg;
+  }
+  50%
+  {
+    rotate: 0deg;
+  }
+  100%
+  {
+    rotate: 35deg;
+  }
+  
+}
+#handlogo
+{
+  top: 20px;
+  width: 70px;
+  position: absolute;
+  left: 100px;
+  rotate: -35deg;
+  animation: zzz 5s infinite;
+}
+#handlogo2
+{
+  top: 25px;
+  width: 70px;
+  position: absolute;
+  left: -2px;
+  rotate: -35deg;
+  animation: zzz2 5s infinite;
+}
+#smile
+{
+  width: 60px;
+  rotate: deg;
+}
+#eyeball
+{
+  top: 5px;
+  width: 70px;
+  position: absolute;
+  animation: eyeball 5s ease-in-out infinite;
+}
+@keyframes eyeball {
+  0%
+  {
+    left: 0px;
+  }
+  40%
+  {
+    left: 0px;
+  }
+  50%
+  {
+    left: -10px;
+  }
+  90%
+  {
+    left: -10px;
+  }
+  100%
+  {
+    left: 0px;
+  }
+  
 }
