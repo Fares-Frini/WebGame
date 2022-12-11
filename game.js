@@ -165,6 +165,8 @@ function start() {
   eye.style.display="block";
   let hand =document.getElementById("hand");
   hand.style.display="block";
+  let feet =document.getElementById("feet");
+  feet.style.display="block";
   let wand =document.getElementById("wand");
   wand.style.display="block";
   var ennemy = document.getElementById("ennemy");
@@ -271,12 +273,30 @@ window.addEventListener("keydown", function (ev) {
     reset();
   } else if (ev.code === "KeyS") {
     console.log("s pressed");
+    let red=document.getElementById("red");
+    red.classList.toggle("red-focus");
+    redtoogle = setInterval(() => {
+      red.classList.toggle("red-focus");
+      clearInterval(redtoogle);
+    }, 50);
     button(3);
   } else if (ev.code === "KeyD") {
+    let green=document.getElementById("green");
+    green.classList.toggle("green-focus");
     console.log("d pressed");
+    greentoogle = setInterval(() => {
+      green.classList.toggle("green-focus");
+      clearInterval(greentoogle);
+    }, 50);
     button(4);
   } else if (ev.code === "KeyF") {
     console.log("f pressed");
+    let blue=document.getElementById("blue");
+    blue.classList.toggle("blue-focus");
+    bluetoggle = setInterval(() => {
+      blue.classList.toggle("blue-focus");
+      clearInterval(bluetoggle);
+    }, 50);
     button(2);
   }
 });
