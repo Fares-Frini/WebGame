@@ -1,0 +1,23 @@
+startgame	game.js	/^function startgame() {$/;"	f
+mapchoose	game.js	/^function mapchoose(screen) {$/;"	f
+maps1	game.js	/^function maps1() {$/;"	f
+maps2	game.js	/^function maps2() {$/;"	f
+maps3	game.js	/^function maps3() {$/;"	f
+maps4	game.js	/^function maps4() {$/;"	f
+R	game.js	/^var R;$/;"	v
+mapschosen	game.js	/^function mapschosen(R) {$/;"	f
+getRandomInt	game.js	/^function getRandomInt(max) {$/;"	f
+E	game.js	/^var E;$/;"	v
+random	game.js	/^function random(ennemy) {$/;"	f
+moove	game.js	/^function moove(name,R) {$/;"	f
+moove1	game.js	/^}function moove1(name,R) {$/;"	f
+moove2	game.js	/^function moove2(name,R) {$/;"	f
+moove3	game.js	/^function moove3(name,R) {$/;"	f
+start	game.js	/^function start() {$/;"	f	function:loose
+timer	game.js	/^function timer() {$/;"	f	function:loose
+button	game.js	/^function button(R) {$/;"	f	function:loose
+reset	game.js	/^function reset() {$/;"	f	function:loose
+score	game.js	/^function score() {$/;"	f	function:loose
+hover	game.js	/^function hover() {$/;"	f	function:loose
+unhover	game.js	/^function unhover() {$/;"	f	function:loose
+win	game.js	/^function win()$/;"	f	function:loose

@@ -312,6 +312,19 @@
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     display: none;
 }
+#win
+  {
+    top: 200px;
+    left: 35%;
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    background-color:purple;
+    border: 5px solid;
+    border-radius: 25px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    display: none;
+}
 #lost h2
 {
     margin-left: 110px;

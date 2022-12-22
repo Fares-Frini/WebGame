@@ -221,6 +221,7 @@ function moove3(name,R) {
       document.getElementById(name).style.display= "none";
       endcycle=0;
       boom=0;  
+      return 1;
     }
   }, 10);
 
@@ -245,11 +246,17 @@ red.style.display = "none";
   feet.style.display = "none";
   var wand = document.getElementById("wand");
   wand.style.display = "none";
+  ennemy1.style.display="none";
+  for (let i = 0; i < 10; i++) {
+    endcycle=i
+    
+  }
 }
 
 function start() {
   timer();
   var R1,R2,R3,R4;
+  var B1,B2,B3,B4;
   var player = document.getElementById("player");
   player.style.display = "block";
   var eye = document.getElementById("eye");
@@ -266,23 +273,20 @@ function start() {
   R2=random(ennemy2);
   R3=random(ennemy3);
   R4=random(ennemy4);
-  moove("ennemy1",R1);
-  var time;
-  time = getRandomInt(2000);
+  B1=moove("ennemy1",R1);
   e1 = setTimeout(() => {
-    moove1("ennemy4",R4);
+    B2=moove1("ennemy4",R4);
     console.log("hello")
-  }, time);
-  time = getRandomInt(2000);
+  }, 3000);
   e2 = setTimeout(() => {
-    moove2("ennemy2",R2);
+    B3=moove2("ennemy2",R2);
         console.log("hello")
-  }, time);
-  time = getRandomInt(2000);
+  }, 5000);
   e3 = setTimeout(() => {
-    moove3("ennemy3",R3);
+    B4=moove3("ennemy3",R3);
     clearInterval(e3)
-  }, time);
+  }, 7000);
+
 
 
 
@@ -495,4 +499,9 @@ function unhover() {
   var eyeball=document.getElementById("eyeball");
   eyeball.style.display="none";
 
+}
+function win()
+{
+  var winner=document.getElementById("win");
+  winner.style.display="block";
 }

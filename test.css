@@ -1,0 +1,148 @@
+.transition-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    background-color: var(--dark);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease-out;
+  }
+  
+  .transition-1.is-active {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+
+  nav
+{
+    order: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #242423;
+    height: 100px;
+    width: 100%;
+}
+.checkbtn
+{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+}
+.cta
+{
+    order: 2;
+}
+.nav_links
+{
+    list-style:none;
+}
+.nav_links li 
+{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a 
+{
+    transition: all 0.3 ease 0s;
+}
+.nav_links li a:hover
+{
+    color: #c77dff;
+}
+.nav_links li:nth-child(1)
+{
+    padding: 0 20px 0 0;
+}
+
+.bigF
+{
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    order: 3;
+    margin-left: auto;
+    font-size: 5em;
+    letter-spacing: 15px;
+    color: #0e3742;
+    background-color: #fff;
+    border-radius: 5px;
+    
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    line-height: 0.7em;
+    outline: none;
+    animation: animatelogo 5s linear infinite;
+}
+@keyframes animatelogo 
+{
+    0%
+    {
+        color: #333533;
+        text-shadow: none;
+    }    
+    50%
+    {
+        
+        color: #5062ff;
+        text-shadow: 0 0 10px #C724B1,
+        0 0 20px #C724B1;
+    }
+    100%
+    {
+        color: #0e3742;
+        text-shadow: none;
+    }  
+}
+
+li, a, button
+{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: #f1faee;
+    text-decoration: none;
+
+}
+button
+{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #21003E;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+button:hover
+{
+    
+    background-color: #21003E;
+    animation: animate 3s linear ;
+}
+@keyframes animate 
+{
+    0%
+    {
+        color: #0e3742;
+        box-shadow: none;
+    }    
+    50%
+    {
+        background-color: #fff;
+        color: #21003E;
+        box-shadow: 0 0 10px #C724B1,
+        0 0 20px #C724B1;
+    }
+    100%
+    {
+        color: #0e3742;
+        box-shadow: none;
+    }  
+}
